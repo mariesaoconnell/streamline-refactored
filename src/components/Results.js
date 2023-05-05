@@ -96,7 +96,7 @@ function Results({title}) {
                   <h3>Streaming Platform(s):</h3>
 									{platformNames !== '' ? (
 										<Container className='d-flex justify-content-center my-3'>
-											{platformNames.map((platform, key=platform) => {
+											{platformNames.map((platform, key={platform}) => {
 												return (
 													<Platform
                             platformObject={platformObject[0][platform]}

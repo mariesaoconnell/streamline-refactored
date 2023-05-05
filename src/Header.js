@@ -5,11 +5,15 @@ import Cover from './assets/images/streamline-cover.svg';
 function Header(props) {
   return (
 		<Container className='d-flex flex-column justify-content-center'>
-			<Image src={Cover} />
 			<Navbar bg='light'>
+				<Image src={Cover} />
 				<Container>
-					<Nav.Link href='/'>Home</Nav.Link>
-					<Nav.Link href='/login'>Login</Nav.Link>
+					<Nav.Link className='mx-5' href='/'>
+						Home
+					</Nav.Link>
+					<Nav.Link className='mx-5' href='/login'>
+						Login
+					</Nav.Link>
 				</Container>
 			</Navbar>
 		</Container>
