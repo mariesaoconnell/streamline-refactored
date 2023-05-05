@@ -2,8 +2,8 @@ import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 function Footer(props) {
   return (
-    <Container fluid>
-      <Navbar fixed='bottom' bg='light' className='d-flex justify-content-center'>
+    <Container className="p-0" fluid>
+      <Navbar sticky='bottom' bg='light' className='d-flex justify-content-center'>
         <Navbar.Brand>Footer</Navbar.Brand>
       </Navbar>
     </Container>

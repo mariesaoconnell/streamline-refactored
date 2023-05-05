@@ -4,13 +4,18 @@ body{
 }
 
 #main {
-  padding: 0
+  padding: 0;
 }
 
 #sub {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('./assets/images/clouds-background.svg');
   background-attachment: fixed;
   background-size: cover;
   padding: 0;
+}
+
+#cover{
+  max-height: 200px;
+  max-width: 100%;
 }

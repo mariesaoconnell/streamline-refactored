@@ -13,7 +13,7 @@ function Platform({platformObject, platformName}) {
   }
 
   return (
-    <Container className='mx-5'>
+    <Container className=''>
       {url ?
         (<a href={url} target='_blank'>
           {platformName}

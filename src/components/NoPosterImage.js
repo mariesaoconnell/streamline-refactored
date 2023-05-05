@@ -3,8 +3,8 @@ import { Container } from 'react-bootstrap';
 
 function NoPosterImage(props) {
   return (
-    <Container>
-      <h2>No Poster Found</h2>
+    <Container className='text-center my-auto'>
+      <h2>No Poster or Trailer Found <br/> 😢</h2>
     </Container>
   );
 }

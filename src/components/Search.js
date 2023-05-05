@@ -19,10 +19,10 @@ function Search() {
 
   return (
 		<>
-			<Container id="main-search" className='my-5'>
+			<Container id="main-search" className='my-2'>
 				<Form onSubmit={handleSubmit}>
-					<Row className='d-flex justify-content-center'>
-						<Col xs={8}>
+					<Row className='d-flex'>
+						<Col className='m-2' xs={8} md={10}>
 							<FloatingLabel controlId='floatingInput' label='Search a Show'>
 								<Form.Control
 									type='text'
@@ -32,7 +32,7 @@ function Search() {
 								/>
 							</FloatingLabel>
 						</Col>
-						<Col xs={1}>
+						<Col className='my-auto d-flex p-0' xs={1} md={1}>
 							<Button type='submit'>Search</Button>
 						</Col>
 					</Row>
