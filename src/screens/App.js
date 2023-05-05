@@ -1,8 +1,8 @@
 import { Container, Image } from "react-bootstrap";
 
 import Search from "../components/Search";
-import Header from "../Header";
-import Footer from "../Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Cover from '../assets/images/streamline-cover.svg';
 
 
@@ -29,7 +29,7 @@ function App() {
 				<Search />
 
 			</Container>
-			
+
 			<Footer />
 		</Container>
 	);

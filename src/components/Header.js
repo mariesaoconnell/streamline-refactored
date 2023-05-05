@@ -1,6 +1,6 @@
 import React from 'react';
-import { Navbar, Nav, Container, Image } from 'react-bootstrap'
-import Cover from './assets/images/streamline-cover.svg';
+import { Navbar, Nav, Container } from 'react-bootstrap'
+
 
 function Header(props) {
   return (
@@ -15,7 +15,6 @@ function Header(props) {
 					</Nav.Link>
 				</Container>
 			</Navbar>
-			{/* <Image src={Cover} /> */}
 		</Container>
 	);
 }

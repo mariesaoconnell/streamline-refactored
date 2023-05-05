@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import { Container, Tabs, Tab } from 'react-bootstrap';
 import axios from 'axios';
-import Platform from './Platform';
-import PosterImage from './PosterImage';
-import NoStreamingPlatforms from './NoStreamingPlatforms';
+import Platform from './resultsComponents/streamingPlatforms/Platform';
+import PosterImage from '../components/resultsComponents/posterImage/PosterImage'
+import NoStreamingPlatforms from './resultsComponents/streamingPlatforms/NoStreamingPlatforms';
 
 function Results({title}) {
   const [key, setKey] = useState(null);
