@@ -2,7 +2,6 @@ import { Container, Image } from "react-bootstrap";
 
 import Search from "../components/Search";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Cover from '../assets/images/streamline-cover.svg';
 
 
@@ -14,23 +13,21 @@ function App() {
 			className='d-flex flex-column justify-content-center'
 			fluid>
 
-			<Container
+			{/* <Container
 				className='d-flex flex-column justify-content-center bg-light'
 				fluid>
 				<Header />
-			</Container>
+			</Container> */}
 
-			<Container className='' id='sub' fluid>
+			<Container id='sub' fluid>
 
-				<Container className='d-flex justify-content-center'>
+				<Container className='d-flex justify-content-center py-3'>
 					<Image id='cover' src={Cover} />
 				</Container>
 
 				<Search />
 
 			</Container>
-
-			<Footer />
 		</Container>
 	);
 }

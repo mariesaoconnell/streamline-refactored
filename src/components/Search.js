@@ -33,7 +33,7 @@ function Search() {
 							</FloatingLabel>
 						</Col>
 						<Col className='my-auto d-flex p-0' xs={1} md={1}>
-							<Button type='submit'>Search</Button>
+							<Button className='btn-lg' type='submit'>Search</Button>
 						</Col>
 					</Row>
 				</Form>
