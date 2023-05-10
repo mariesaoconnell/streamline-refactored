@@ -21,18 +21,19 @@ function Series({results}) {
 				backdropFilter: 'blur(10px)',
 			}}
 			fluid>
-			<h3>
-				<em>Results:</em>
-			</h3>
 			{results && (
 				<Container fluid>
-					<h1>{results.title}</h1>
+					<Container>
+						<h5>
+							<em>Results </em>
+						</h5>
+						<h1 className='title mb-5 text-center'>{results.title}</h1>
+					</Container>
 
 					<Tabs
 						className='d-flex justify-content-center'
 						defaultActiveKey={key}
 						onSelect={(k) => setKey(k)}>
-						
 						{/* ITERATE OVER SEASONS */}
 						{seasons.map((season, key = { season }) => {
 							let youtubeURL = null;
@@ -84,9 +85,11 @@ function Series({results}) {
 
 									{/* STREAMING PLATFORMS */}
 									<Container className='my-5' fluid>
-										<h6>Streaming Platform(s):</h6>
+										<h6>
+											<em>Streaming Platform(s):</em>
+										</h6>
 										{platformNames !== '' ? (
-											<Container className='d-flex flex-row' fluid>
+											<Container className='d-flex flex-row my-5' fluid>
 												{platformNames.map((platform, key = { platform }) => {
 													return (
 														<Platform

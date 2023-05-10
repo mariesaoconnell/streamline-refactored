@@ -13,12 +13,21 @@ function Platform({platformObject, platformName}) {
   }
 
   return (
-    <Container className=''>
-      {url ?
-        (<a href={url} target='_blank'>
-          {platformName}
-        </a>) : (<p>{platformName}</p>)
-      }
+    <Container className='text-center'>
+      <h5>
+        {url ?
+          (
+            <a
+              href={url}
+              rel='noreferrer'
+              target='_blank'
+              style={{textDecoration:'none'}}
+            >
+            {platformName}
+            </a>
+          ) : (<p>{platformName}</p>)
+        }
+      </h5>
     </Container>
 	);
 }
