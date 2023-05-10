@@ -32,6 +32,7 @@ function Series({results}) {
 						className='d-flex justify-content-center'
 						defaultActiveKey={key}
 						onSelect={(k) => setKey(k)}>
+						
 						{/* ITERATE OVER SEASONS */}
 						{seasons.map((season, key = { season }) => {
 							let youtubeURL = null;

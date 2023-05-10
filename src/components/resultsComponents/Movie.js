@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import { Container } from 'react-bootstrap'
 import PosterImage from './posterImage/PosterImage';
-import NoPosterImage from './posterImage/NoPosterImage';
 import Trailer from './trailer/Trailer';
-import NoTrailer from './trailer/NoTrailer'
+import NoStreamingPlatforms from './streamingPlatforms/NoStreamingPlatforms';
+import Platform from './streamingPlatforms/Platform';
+
 
 function Movie({results}) {
   const [youtubeURL, setYoutubeURL] = useState(null)
@@ -24,15 +25,33 @@ function Movie({results}) {
     }
   }, [])
 
-  
+  console.log(platformNames, platformObject)
+
   return (
     <Container>
       <h1>{results.title}</h1>
 
-      {youtubeURL ?
-        <Trailer /> :
-        <NoTrailer />
-      }
+      {/* TRAILER OR POSTER IMAGE */}
+
+      <Container>
+        {youtubeURL ?
+          <Trailer results={results} youtubeURL={youtubeURL}/> :
+          <PosterImage posterUrl={posterUrl}/>
+        }
+      </Container>
+
+      {/* STREAMING PLATFORMS */}
+
+      {/* <Container>
+        {platformNames !== '' ?
+          platformNames.map((platform, key = platform)=>{
+            return(
+              <Platform />
+            )
+          }) :
+          <NoStreamingPlatforms />
+        }
+      </Container> */}
 
     </Container>
   );
