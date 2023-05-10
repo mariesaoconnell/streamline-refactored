@@ -69,7 +69,7 @@ function Movie({results}) {
 						})}
 					</Container>
 				) : (
-					<Container>
+					<Container className='d-flex' fluid>
 						<NoStreamingPlatforms />
 					</Container>
 				)}
