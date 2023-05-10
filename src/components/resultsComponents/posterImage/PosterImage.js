@@ -1,14 +1,15 @@
 import React from 'react';
-import { Container, Image } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import NoPosterImage from './NoPosterImage';
 
 function PosterImage({posterUrl}) {
   return (
 		<Container
-			style={{ overflow: 'hidden' }}
+			style={{ overflow: 'hidden'}}
 			className='ratio ratio-16x9'>
 			{posterUrl ?
-				<Image alt={posterUrl} src={posterUrl} /> :
+				<img src={posterUrl} alt={posterUrl}/>
+				:
 				<NoPosterImage />
 			}
 		</Container>

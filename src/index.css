@@ -28,3 +28,7 @@ body{
 .title{
   font-family: Farmhouse;
 }
+
+img {
+  object-fit: cover;
+}

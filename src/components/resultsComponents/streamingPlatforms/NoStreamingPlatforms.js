@@ -3,12 +3,12 @@ import { Container } from 'react-bootstrap';
 
 function NoStreamingPlatforms(props) {
   return (
-    <Container className='d-flex flex-column text-center m-5'>
-      <h2>No Streaming Platforms Found</h2>
-      <br />
-      😢
-    </Container>
-  );
+		<Container className='text-center my-5 justify-content-center '>
+			<h2 className='title'>No Streaming Platforms Found</h2>
+			<br />
+			😢
+		</Container>
+	);
 }
 
 export default NoStreamingPlatforms;
