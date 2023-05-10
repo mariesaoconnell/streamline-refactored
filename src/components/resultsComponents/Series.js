@@ -58,8 +58,13 @@ function Series({results}) {
 							{
 								/* CHECK IF THERE IS A YT ID... IF NOT VARIABLE WILL NOT BE UPDATED WITH URL */
 							}
-							if (season.youtubeTrailerVideoId !== '')
+
+							if(season.title ===  'Season 1'){
+								youtubeURL = `https://www.youtube.com/embed/${results.youtubeTrailerVideoId}`
+							}
+							if (season.youtubeTrailerVideoId !== ''){
 								youtubeURL = `https://www.youtube.com/embed/${season.youtubeTrailerVideoId}`;
+								}
 
 							return (
 								<Tab className='' eventKey={season.title} title={season.title}>
