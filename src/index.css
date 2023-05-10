@@ -1,3 +1,8 @@
+@font-face{
+  font-family: 'Farmhouse';
+  src:url('./assets/fonts/Farmhouse.otf')
+}
+
 body{
   height: 100vh;
   padding: 0;
@@ -18,4 +23,8 @@ body{
 #cover{
   max-height: 200px;
   max-width: 100%;
+}
+
+.title{
+  font-family: Farmhouse;
 }
