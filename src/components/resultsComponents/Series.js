@@ -26,7 +26,9 @@ function Series({results}) {
 					<Container>
 						<h5>
 							<em>Results </em>
+							{/* ⚠️ BREADCRUMB ⚠️*/}
 						</h5>
+
 						<h1 className='title mb-5 text-center'>{results.title}</h1>
 					</Container>
 
@@ -59,16 +61,17 @@ function Series({results}) {
 								/* CHECK IF THERE IS A YT ID... IF NOT VARIABLE WILL NOT BE UPDATED WITH URL */
 							}
 
-							if(season.title ===  'Season 1'){
-								youtubeURL = `https://www.youtube.com/embed/${results.youtubeTrailerVideoId}`
+							if (season.title === 'Season 1') {
+								youtubeURL = `https://www.youtube.com/embed/${results.youtubeTrailerVideoId}`;
 							}
-							if (season.youtubeTrailerVideoId !== ''){
+							if (season.youtubeTrailerVideoId !== '') {
 								youtubeURL = `https://www.youtube.com/embed/${season.youtubeTrailerVideoId}`;
-								}
+							}
 
 							return (
 								<Tab className='' eventKey={season.title} title={season.title}>
-									{/* VIDEO */}
+
+									{/* IF YOUTUBE URL SHOW TRAILER, ELSE SHOW POSTER IMAGE */}
 									{youtubeURL !== null ? (
 										<Container
 											className='d-flex embed-responsive ratio ratio-16x9'
@@ -80,7 +83,6 @@ function Series({results}) {
 												allowFullScreen
 											/>
 
-											{/* IF NO VIDEO, SHOW POSTERS */}
 										</Container>
 									) : (
 										<Container>
@@ -89,10 +91,12 @@ function Series({results}) {
 									)}
 
 									{/* STREAMING PLATFORMS */}
+
 									<Container className='my-5' fluid>
 										<h6>
 											<em>Streaming Platform(s):</em>
 										</h6>
+
 										{platformNames !== '' ? (
 											<Container className='d-flex flex-row my-5' fluid>
 												{platformNames.map((platform, key = { platform }) => {
@@ -105,7 +109,7 @@ function Series({results}) {
 												})}
 											</Container>
 										) : (
-											<Container>
+											<Container className='d-flex' fluid>
 												<NoStreamingPlatforms />
 											</Container>
 										)}

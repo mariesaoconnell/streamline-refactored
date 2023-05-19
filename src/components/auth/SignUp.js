@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 // NEED TO SET UP VALIDATION TO DETERMINE IF EMAILS MATCH AND PASSWORDS MATCH 
 
-
 function SignUp({setLogin}) {
 
   const [validated, setValidated] = useState(false);
