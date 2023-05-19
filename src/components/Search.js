@@ -39,9 +39,6 @@ function Search() {
 					</Row>
 				</Form>
 			</Container>
-			<Container>
-				{/* {submitted === true ? <Results title={title} /> : null} */}
-			</Container>
 		</>
 	);
 }
