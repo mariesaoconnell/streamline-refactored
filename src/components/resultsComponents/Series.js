@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Tab, Tabs} from 'react-bootstrap';
+import { Container, Tab, Tabs, Breadcrumb} from 'react-bootstrap';
 import PosterImage from './posterImage/PosterImage';
 import Platform from './streamingPlatforms/Platform';
 import NoStreamingPlatforms from './streamingPlatforms/NoStreamingPlatforms';
@@ -25,8 +25,10 @@ function Series({results}) {
 				<Container fluid>
 					<Container>
 						<h5>
-							<em>Results </em>
-							{/* ⚠️ BREADCRUMB ⚠️*/}
+							<Breadcrumb>
+								<Breadcrumb.Item href='/'>Home</Breadcrumb.Item>
+								<Breadcrumb.Item active>Results</Breadcrumb.Item>
+							</Breadcrumb>
 						</h5>
 
 						<h1 className='title mb-5 text-center'>{results.title}</h1>
@@ -70,7 +72,6 @@ function Series({results}) {
 
 							return (
 								<Tab className='' eventKey={season.title} title={season.title}>
-
 									{/* IF YOUTUBE URL SHOW TRAILER, ELSE SHOW POSTER IMAGE */}
 									{youtubeURL !== null ? (
 										<Container
@@ -82,7 +83,6 @@ function Series({results}) {
 												src={youtubeURL}
 												allowFullScreen
 											/>
-
 										</Container>
 									) : (
 										<Container>

@@ -1,7 +1,4 @@
-import { Container, Image } from "react-bootstrap";
 import Search from "./components/Search";
-import Cover from './assets/images/streamline-cover.svg';
-import Navigation from "./components/Navigation";
 import Layout from "./components/Layout";
 
 

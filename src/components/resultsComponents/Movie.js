@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Container } from 'react-bootstrap'
+import { Container, Breadcrumb } from 'react-bootstrap'
 import PosterImage from './posterImage/PosterImage';
 import Trailer from './trailer/Trailer';
 import NoStreamingPlatforms from './streamingPlatforms/NoStreamingPlatforms';
@@ -35,8 +35,10 @@ function Movie({results}) {
 			}}>
 			<Container>
 				<h5>
-					<em>Results </em>
-					{/* ⚠️ BREADCRUMB ⚠️*/}
+					<Breadcrumb>
+						<Breadcrumb.Item href='/'>Home</Breadcrumb.Item>
+						<Breadcrumb.Item active>Results</Breadcrumb.Item>
+					</Breadcrumb>
 				</h5>
 				<h1 className='title mb-5 text-center'>{results.title}</h1>
 			</Container>

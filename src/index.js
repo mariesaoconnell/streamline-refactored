@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import LogLayout from './components/auth';
 
 import './index.css'
+import ResultsScreen from './screens/ResultsScreen';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <LogLayout />
+  },
+  {
+    path: "/results/:title",
+    element: <ResultsScreen />
   }
 ])
 

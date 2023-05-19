@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, FloatingLabel, Row, Col } from 'react-bootstrap';
-import Results from './Results';
+import { useNavigate } from 'react-router-dom';
+
 
 function Search() {
+	const navigate = useNavigate();
 
-	let [title, setTitle] = useState('');
-	let [submitted, setSubmitted] = useState(false);
+	const [title, setTitle] = useState('');
 
 	function handleChange(event){
 		setTitle(event.target.value)
-		setSubmitted(false)
 	}
 
 	function handleSubmit(event){
-		setSubmitted(true)
+
 		event.preventDefault();
+		navigate(`/results/${title.toLowerCase()}`)
 	}
 
   return (
@@ -39,7 +40,7 @@ function Search() {
 				</Form>
 			</Container>
 			<Container>
-				{submitted === true ? <Results title={title} /> : null}
+				{/* {submitted === true ? <Results title={title} /> : null} */}
 			</Container>
 		</>
 	);

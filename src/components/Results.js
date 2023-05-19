@@ -2,11 +2,13 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Series from './resultsComponents/Series';
 import Movie from './resultsComponents/Movie';
-import NoResults from './resultsComponents/NoResults';
+import { useParams } from 'react-router-dom';
 
-function Results({title}) {
+function Results() {
+	let { title } = useParams();
   const [results, setResults] = useState(null);
   const [isSeries, setSeries] = useState(null);
+
 
   useEffect(()=>{
       const fetchResults = async () => {
@@ -27,12 +29,18 @@ function Results({title}) {
 				}
 			};
     fetchResults()
-
   }, [])
 
 	return (
 		<>
-			{results !== null ? <>{isSeries ? <Series results={results}/> : <Movie results={results}/>} </>: null}
+			{results !== null ? <>
+				{ isSeries ?
+					<Series
+						results={results}
+					/> :
+					<Movie
+						results={results}/>
+					} </>: null}
 		</>
 	);
 }
